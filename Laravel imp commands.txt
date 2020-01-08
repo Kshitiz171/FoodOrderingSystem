@@ -1,0 +1,23 @@
+php artisan migrate
+composer require laravel/ui
+php artisan ui:auth
+php artisan make:seeder UsersTableSeeder
+php artisan db:seed --class=UserstableSeeder
+php artisan migrate:rollback
+php artisan migrate:reset
+
+--controller
+php artisan make:controller PoseController --resource
+
+--migration
+php artisan make:migration create_blogs_table
+php artisan migrate
+php artisan make:model Model/Blog
+
+--to alter migration table
+php artisan make:migration alter_blogs_table
+
+php artisan make:model Models/news -m
+
+--to install laravel collective(new forms)
+composer require laravelcollective/html
